@@ -1,0 +1,14 @@
+[Unit]
+Description=auth-trace: D-Bus authentication request recorder (system bus)
+After=dbus.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/lib/auth-trace/auth_monitor.py --system --dir /var/log/auth-trace
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

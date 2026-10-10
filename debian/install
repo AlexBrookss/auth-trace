@@ -1,0 +1,4 @@
+auth_monitor.py usr/lib/auth-trace/
+auth-trace-report.py usr/lib/auth-trace/
+systemd/auth-trace-system.service lib/systemd/system/
+systemd/auth-trace-session.service usr/lib/systemd/user/

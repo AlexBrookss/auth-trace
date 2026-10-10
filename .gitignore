@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# 运行期产物（服务 / 手动模式日志）
+*.log
+*.log.1
+monitor.out
+.window-ids
+*.pid
+
+# Debian 构建产物
+debian/.debhelper/
+debian/files
+debian/*.debhelper
+debian/*.debhelper.log
+debian/*.substvars
+debian/debhelper-build-stamp
+debian/auth-trace/

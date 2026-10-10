@@ -1,0 +1,30 @@
+Source: auth-trace
+Section: admin
+Priority: optional
+Maintainer: AlexBrookss <alexbrookss@users.noreply.github.com>
+Build-Depends: debhelper (>= 12~)
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/AlexBrookss/auth-trace.git
+Vcs-Browser: https://github.com/AlexBrookss/auth-trace
+
+Package: auth-trace
+Architecture: all
+Depends: ${misc:Depends},
+         python3,
+         dbus,
+         systemd
+Recommends: xdotool,
+            x11-utils
+Description: record who triggers desktop authentication popups (UOS/DDE)
+ auth-trace passively listens on the D-Bus system bus and the session bus
+ and records every authentication request (polkit, deepin-authenticate,
+ dde-authority, UDCP IAM auth-dialog, permission manager, ...) together
+ with the calling process (pid, executable, command line, systemd unit)
+ and, for polkit, the requested action id.
+ .
+ Captured events are stored on disk and rotated, so an intermittent
+ authentication popup can be investigated after the fact.  Run
+ "auth-trace-report <reproduction time>" to generate an evidence bundle
+ that combines the captured D-Bus events, window records and journald
+ logs for the given time window.

@@ -1,0 +1,13 @@
+[Unit]
+Description=auth-trace: D-Bus authentication request recorder (session bus + windows)
+After=dbus.socket
+
+[Service]
+Type=simple
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=%t/bus
+ExecStart=/usr/bin/python3 /usr/lib/auth-trace/auth_monitor.py --service-session --dir %h/.local/state/auth-trace --windows
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
