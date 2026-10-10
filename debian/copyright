@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: auth-trace
-Upstream-Contact: AlexBrookss <alexbrookss@users.noreply.github.com>
+Upstream-Contact: maxu <maxu197846335@outlook.com>
 Source: https://github.com/AlexBrookss/auth-trace
 
 Files: *
-Copyright: 2026 AlexBrookss
+Copyright: 2026 maxu <maxu197846335@outlook.com>
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
