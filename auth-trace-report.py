@@ -246,6 +246,7 @@ def main():
     if outpath:
         print()
         print('完整报告(含原始报文): %s' % outpath)
+        print('请把该报告文件发回给开发人员分析。')
 
 
 if __name__ == '__main__':
